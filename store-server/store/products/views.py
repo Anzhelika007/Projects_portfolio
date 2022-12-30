@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.views.generic.base import TemplateView
 from django.views.generic.list import ListView
 
+
 from products.models import ProductCategory, Product, Basket
 
 
@@ -34,7 +35,7 @@ class ProductsListView(ListView):
 
 
 @login_required
-def basket_add(request, product_id):
+def basket_add(request, c):
     product = Product.objects.get(id=product_id)
     baskets = Basket.objects.filter(user=request.user, product=product)
 
