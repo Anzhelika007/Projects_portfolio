@@ -5,8 +5,8 @@ from django.urls import reverse
 
 from products.models import Product, ProductCategory
 
-class IndexViewTestCase(TestCase):
 
+class IndexViewTestCase(TestCase):
     def test_view(self):
         path = reverse('index')
         response = self.client.get(path)
@@ -16,13 +16,11 @@ class IndexViewTestCase(TestCase):
         self.assertTemplateUsed(response, 'products/index.html')
 
 
-
 class ProductsListViewTestCase(TestCase):
     fixtures = ['categories.json', 'goods.json']
 
     def setUp(self):
         self.products = Product.objects.all()
-
 
     def test_list(self):
         path = reverse('products:index')

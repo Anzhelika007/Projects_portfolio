@@ -1,11 +1,11 @@
-from http import HTTPStatus
 from datetime import timedelta
-from django.utils.timezone import now
+from http import HTTPStatus
 
 from django.test import TestCase
 from django.urls import reverse
+from django.utils.timezone import now
 
-from users.models import User, EmailVerification
+from users.models import EmailVerification, User
 
 
 class UserRegistrationTestCase(TestCase):
@@ -50,4 +50,3 @@ class UserRegistrationTestCase(TestCase):
 
         self.assertEqual(response.status_code, HTTPStatus.OK)
         self.assertContains(response, 'Пользователь с таким именем уже существует.', html=True)
-
