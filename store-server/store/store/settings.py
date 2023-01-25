@@ -14,7 +14,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-DOMAIN_NAME = 'http://localhost:8000'
+DOMAIN_NAME = 'http://127.0.0.1:8000'
 
 # Application definition
 
@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django.contrib.humanize',
 
     'allauth',
     'allauth.account',
@@ -179,3 +180,9 @@ SOCIALACCOUNT_PROVIDERS = {
 
 CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
 CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
+
+# Stripe
+
+STRIPE_PUBLIC_KEY = 'pk_test_51MPjJtGJdydDwOZSTKup5F4B8gORzC3wWueoP8IHwloYhPnvOapdAod4Gazo2PrD4hfXqCqcKo4zlDB10lZH85Wi00xE3jBECp'
+STRIPE_SECRET_KEY = 'sk_test_51MPjJtGJdydDwOZSL6IIQdT64bIXxZle2F2v29Q5eao6CTMaLMHzdZwvbF1ZAOL906TudUdK0hOLA8xPE7HNO31d00DSiogugo'
+STRIPE_WEBHOOK_SECRET = 'whsec_8ee3fe35543af265031648b075c5eb24881b25176a5b31b2f6f849428f0e634a'
