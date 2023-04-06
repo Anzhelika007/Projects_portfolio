@@ -1,0 +1,46 @@
+/*Colors dark theme */
+/* bacgraund */
+$color-white: #FFFFFF;
+$color-white-light: #F2F2F2;
+$color-white-s: #EEF2F8;
+$color-dark: #0F1319;
+$color-black-l: #444;
+/* box-shadow */
+$box-shadow-elements: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+/* text */
+$color-grey-dark: #5F6369;
+$color-grey-light: #B0B4B9;
+$color-black: #000000;
+$font-family: 'Söhne Breit';
+/* icons */
+$color-purple-l: #B2A3FA;
+$color-green-l: #CEEA7E;
+$color-orange-l: #FFB393;
+$color-blue-l: #97DAFF;
+$color-pink-l: #FFA6BB;
+$color-yellow: #FFE484;
+
+/* gradient */
+$gradient-orange-yellow: linear-gradient(135deg, #FFB393 0%, #FFEE93 100%);
+$gradient-blue-pink: linear-gradient(135deg, #97DAFF 0%, #FFA6BB 100%);
+$gradient-purple-pink: linear-gradient(135deg, #B2A3FA 0%, #FFA6BB 99.99%);
+$gradient-purple-blue: linear-gradient(135deg, #B2A3FA 0%, #97DAFF 99.99%);
+$gradient-green-blue: linear-gradient(135deg, #BFF489 0%, #97DAFF 100%);
+$gradient-green-yellow: linear-gradient(135deg, #BFF489 0%, #FFEE93 99.99%);
+$gradient-orange-yellow: linear-gradient(135deg, #FFB393 0%, #FFEE93 100%);
+$gradient-pink-yellow: linear-gradient(135deg, #FFA6BB 0%, #FFEE93 100%);
+$gradient-purple-blue-green: linear-gradient(135deg, #B2A3FA 0%, #97DAFF 47.92%, #BFF489 100%);
+$gradient-yellow-orange-pink: linear-gradient(135deg, #FFEE93 0%, #FFB393 50.52%, #FFA6BB 100%);
+$gradient-rainbow: linear-gradient(135deg, #B2A3FA 0%, #97DAFF 18.75%, #BFF489 39.06%, #FFEE93 59.9%, #FFB393 80.73%, #FFA6BB 100%);
+;
+
+
+
+
+/* fonts */
+@font-face {
+    font-family: 'Söhne Breit';
+    src: url("../../font/soehne-breit-halbfett.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}

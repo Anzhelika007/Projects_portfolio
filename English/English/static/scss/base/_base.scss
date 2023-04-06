@@ -1,0 +1,85 @@
+@mixin flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    transition: all 0.4s ease;
+}
+
+body {
+    transition: all 0.4s ease;
+    background: $bg-color;
+    color: $color-text;
+    font-family: $font-family;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    font-family: $font-family;
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    font-family: $font-family;
+    font-size: 50px;
+    line-height: 104%;
+    color: $text-color-index;
+}
+
+h2 {
+    font-family: $font-family;
+    font-size: 38px;
+    line-height: 116%;
+    color: $text-color-index;
+}
+
+h3 {
+    font-family: $font-family;
+    font-size: 28px;
+    line-height: 116%;
+    color: $color-text;
+}
+
+h4 {
+    font-family: $font-family;
+    font-size: 20px;
+    line-height: 116%;
+    color: $color-text;
+}
+
+h5 {
+    font-family: $font-family;
+    font-size: 18px;
+    line-height: 116%;
+    color: $color-text;
+}
+
+p {
+    font-family: $font-family;
+    font-size: 16px;
+    line-height: 156%;
+    color: $color-text;
+}
+
+.container {
+    width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+}

@@ -1,65 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
+{% load static %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="color-scheme" content="dark light">
+    <link rel="stylesheet" href="./static/css/main.css">
+    {% if title %}
+    <title>{% block title %}{% endblock %}</title>
+    {% else %}
+    <title>English</title>
+    {% endif %}
 </head>
+
 <body>
-<header>
-    <div class="px-3 py-2 text-bg-dark">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-          </a>
+    <header class="header">
+        <div class="box_shadow">
+            <div class="header__wrapper container">
+                <svg class="header__logo">
+                    <use class="text-white" href="{% static 'icon/sprite.svg' %}#logo" fill="white"></use>
+                </svg>
+                <nav class="header__menu">
+                    <ul class="header__menu__list">
+                        <li class="header__menu__list-items">
+                            <a class="header__menu__list-link" href="#">
+                                <svg class="header__menu-icon">
+                                    <use class="icon__color" href="{% static 'icon/sprite.svg' %}#house">
+                                    </use>
+                                </svg>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li class="header__menu__list-items">
+                            <a class="header__menu__list-link" href="#">
+                                <svg class="header__menu-icon">
+                                    <use class="text-white" href="{% static 'icon/sprite.svg' %}#speedometer2">
+                                    </use>
+                                </svg>
+                                <span>Features</span>
+                            </a>
+                        </li>
+                        <li class="header__menu__list-items">
+                            <a class="header__menu__list-link" href="#">
+                                <svg class="header__menu-icon">
+                                    <use class="text-white" href="{% static 'icon/sprite.svg' %}#table">
+                                    </use>
+                                </svg>
+                                <span>Pricing</span>
+                            </a>
+                        </li>
+                        <li class="header__menu__list-items dropdown">
+                            <a class="header__menu__list-link" href="#">
+                                <svg class="header__menu-icon">
+                                    <use class="text-white" href="{% static 'icon/sprite.svg' %}#person-circle">
+                                    </use>
+                                </svg>
+                                <span>Hi, user!</span>
+                            </a>
+                            <div class="dropdown-content">
+                                <a href="#">Profile</a>
+                                <a href="#">Logout</a>
+                                <a href="#">Link 3</a>
+                            </div>
 
-          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-            <li>
-              <a href="#" class="nav-link text-secondary">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"></use></svg>
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"></use></svg>
-                Dashboard
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"></use></svg>
-                Orders
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"></use></svg>
-                Products
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"></use></svg>
-                Customers
-              </a>
-            </li>
-          </ul>
+                        </li>
+                        <li class="header__menu__list-items ">
+                            <select name="theme" id="theme">
+                                <option value="light" selected="selected">Light</option>
+                                <option value="dark">dark</option>
+                                <option value="soft">soft</option>
+                            </select>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="px-3 py-2 border-bottom mb-3">
-      <div class="container d-flex flex-wrap justify-content-center">
-        <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
-          <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-        </form>
+    </header>
+    {% block body %}
 
-        <div class="text-end">
-          <button type="button" class="btn btn-light text-dark me-2">Login</button>
-          <button type="button" class="btn btn-primary">Sign-up</button>
-        </div>
-      </div>
-    </div>
-  </header>
+    {% endblock %}
+
+
+
+    <script src="../../../static/JS/app.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,97 @@
+.header {
+    background-color: $bg-color-header;
+    padding-top: 20px;
+    height: 130px;
+
+    .box_shadow {
+        box-shadow: 0px 1px 2px rgba(118, 124, 124, 0.5),
+            0px 2px 4px rgba(194, 198, 198, 0.5),
+            0px 4px 8px rgba(161, 167, 167, 0.5),
+            0px 8px 16px rgba(184, 195, 195, 0.5);
+    }
+
+    &__wrapper {
+        @include flex();
+        height: 90px;
+        padding: 10px;
+    }
+
+    &__logo,
+    &__logo>use {
+        width: 40px;
+    }
+
+    &__menu__list {
+        @include flex();
+        gap: 30px;
+        align-items: center;
+
+        &-link {
+            @include flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 5px;
+            font-family: $font-family;
+        }
+
+        &-items {
+            opacity: 0.7;
+
+            &:last-child {
+                width: 100px;
+
+                select {
+                    width: 100px;
+                }
+            }
+
+            &:nth-child(1) {
+                font-family: $font-family;
+                color: $color-purple-l;
+            }
+
+            &:nth-child(2) {
+                color: $color-green-l;
+            }
+
+            &:nth-child(3) {
+                color: $color-orange-l;
+            }
+
+            &:nth-child(4) {
+                color: $color-blue-l;
+            }
+
+            &:nth-child(5) {
+                color: $color-pink-l;
+
+                #theme {
+                    @include select;
+                }
+            }
+
+            &:hover:nth-child(1),
+            &:hover:nth-child(2),
+            &:hover:nth-child(3),
+            &:hover:nth-child(4) {
+                transform: scale(1.2);
+                transition: .5s;
+                opacity: 1.0;
+            }
+
+            &:hover:nth-child(5) {
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                opacity: 1.0;
+            }
+        }
+    }
+
+    &__menu-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    #theme {
+        @include select
+    }
+}
