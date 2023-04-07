@@ -90,7 +90,8 @@ p {
 }
 
 .container {
-  width: 1200px;
+  width: calc(100vw - 40px);
+  min-width: 280px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -280,62 +281,17 @@ p {
   text-align: center;
   padding: 20px;
 }
-.index h4 {
-  color: #FFFFFF;
-  padding: 10px;
-}
 .index__wrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 40px;
-  padding-top: 50px;
 }
-.index__card {
-  width: 200px;
-  height: 160px;
-  border-radius: 16px;
-  backdrop-filter: blur(6px);
+.index__menu {
+  background-color: #444;
+  width: 300px;
 }
-.index__card:nth-child(1n) {
-  border: 2px solid rgba(178, 163, 250, 0.48);
-}
-.index__card:nth-child(1n):hover {
-  box-shadow: 5px 5px 15px 5px rgba(178, 163, 250, 0.48);
-}
-.index__card:nth-child(2n) {
-  border: 2px solid rgba(206, 234, 126, 0.48);
-}
-.index__card:nth-child(2n):hover {
-  box-shadow: 5px 5px 15px 5px rgba(206, 234, 126, 0.48);
-}
-.index__card:nth-child(3n) {
-  border: 2px solid rgba(255, 179, 147, 0.48);
-}
-.index__card:nth-child(3n):hover {
-  box-shadow: 5px 5px 15px 5px rgba(255, 179, 147, 0.48);
-}
-.index__card:nth-child(4n) {
-  border: 2px solid rgba(151, 218, 255, 0.48);
-}
-.index__card:nth-child(4n):hover {
-  box-shadow: 5px 5px 15px 5px rgba(151, 218, 255, 0.48);
-}
-.index__card:nth-child(5n) {
-  border: 2px solid rgba(255, 166, 187, 0.48);
-}
-.index__card:nth-child(5n):hover {
-  box-shadow: 5px 5px 15px 5px rgba(255, 166, 187, 0.48);
-}
-.index__card:nth-child(6n) {
-  border: 2px solid rgba(255, 228, 132, 0.48);
-}
-.index__card:nth-child(6n):hover {
-  box-shadow: 5px 5px 15px 5px rgba(255, 228, 132, 0.48);
-}
-.index__card:hover {
-  transform: scale(1.2);
-  transition: 0.5s;
+.index__content {
+  background-color: linear-gradient(135deg, #FFEE93 0%, #FFB393 50.52%, #FFA6BB 100%);
 }
 
 /*# sourceMappingURL=main.css.map */

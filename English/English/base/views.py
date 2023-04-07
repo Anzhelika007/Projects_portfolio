@@ -3,19 +3,23 @@ from django.shortcuts import HttpResponseRedirect
 from django.views.generic.base import TemplateView
 from django.views.generic.list import ListView
 
-from base.models import CategoryWord, Word, IrregularVerbs
+from base.models import CategoryWord, Word, IrregularVerbs, Themes
 
 
 class IndexView(TemplateView):
     template_name = 'base/index.html'
-    title = 'Learn'
+
+    def get_context_data(self, **kwargs):
+        context = super(IndexView, self).get_context_data()
+        context['title'] = 'Learn'
+        context['tremes'] = Themes.objects.all()
+        print(context['tremes'])
+        return context
 
 
-# class CategoryWordView(ListView):
-#     model = CategoryWord
-#     template_name = 'base/list.html'
-#     paginate_by = 9
-#     title = 'Store - Каталог'
+
+
+
 
 
 

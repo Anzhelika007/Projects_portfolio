@@ -79,7 +79,8 @@ p {
 }
 
 .container {
-    width: 1200px;
+    width: calc(100vw - 40px);
+    min-width: calc(320px - 40px);
     padding: 0 20px;
     margin: 0 auto;
 }
